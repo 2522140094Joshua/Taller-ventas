@@ -84,7 +84,7 @@
         
         <div class="form-row">
             <div class="form-group">
-                <label for="nombre">Nombre de la Refacción *</label>
+                <label for="nombre">Nombre de la Refacción</label>
                 <input type="text" id="nombre" name="nombre" class="form-control"
                        value="{{ old('nombre') }}" required>
                 @error('nombre')
@@ -93,7 +93,7 @@
             </div>
 
             <div class="form-group">
-                <label for="codigo">Código/SKU *</label>
+                <label for="codigo">Código</label>
                 <input type="text" id="codigo" name="codigo" class="form-control"
                        value="{{ old('codigo') }}" required>
                 <span class="form-hint">Código único de identificación</span>
@@ -105,7 +105,7 @@
 
         <div class="form-row">
             <div class="form-group">
-                <label for="marca">Marca *</label>
+                <label for="marca">Marca</label>
                 <input type="text" id="marca" name="marca" class="form-control"
                        value="{{ old('marca') }}" required>
                 @error('marca')
@@ -114,7 +114,7 @@
             </div>
 
             <div class="form-group">
-                <label for="categoria">Categoría *</label>
+                <label for="categoria">Categoría</label>
                 <input type="text" id="categoria" name="categoria" class="form-control"
                        value="{{ old('categoria') }}" required>
                 <span class="form-hint">Ej: Filtros, Frenos, Motor, etc.</span>
@@ -125,7 +125,7 @@
         </div>
 
         <div class="form-group">
-            <label for="descripcion">Descripción *</label>
+            <label for="descripcion">Descripción</label>
             <textarea id="descripcion" name="descripcion" class="form-control"
                       required>{{ old('descripcion') }}</textarea>
             @error('descripcion')
@@ -135,7 +135,7 @@
 
         <div class="form-row">
             <div class="form-group">
-                <label for="precio">Precio de Venta (MXN) *</label>
+                <label for="precio">Precio de Venta</label>
                 <input type="number" id="precio" name="precio" class="form-control"
                        step="0.01" min="0" value="{{ old('precio') }}" required>
                 @error('precio')
@@ -144,7 +144,7 @@
             </div>
 
             <div class="form-group">
-                <label for="precio_compra">Precio de Compra (MXN)</label>
+                <label for="precio_compra">Precio de Compra</label>
                 <input type="number" id="precio_compra" name="precio_compra" class="form-control"
                        step="0.01" min="0" value="{{ old('precio_compra') }}">
                 <span class="form-hint">Opcional - Costo de adquisición</span>
@@ -156,7 +156,7 @@
 
         <div class="form-row">
             <div class="form-group">
-                <label for="stock">Stock Inicial *</label>
+                <label for="stock">Stock Inicial</label>
                 <input type="number" id="stock" name="stock" class="form-control"
                        min="0" value="{{ old('stock', 0) }}" required>
                 @error('stock')

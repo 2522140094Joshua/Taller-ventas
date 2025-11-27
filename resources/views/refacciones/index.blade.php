@@ -161,7 +161,7 @@
 @section('content')
 <div class="action-bar">
     <h2>Catálogo de Refacciones</h2>
-    <a href="{{ route('refacciones.create') }}" class="btn btn-success">➕ Nueva Refacción</a>
+    <a href="{{ route('refacciones.create') }}" class="btn btn-success">Nueva Refacción</a>
 </div>
 
 @if($refacciones->count() > 0)
@@ -173,7 +173,7 @@
             
             <h3 class="refaccion-nombre">{{ $refaccion->nombre }}</h3>
             <p class="refaccion-codigo">Código: {{ $refaccion->codigo }}</p>
-            <p class="refaccion-marca">🏷️ {{ $refaccion->marca }}</p>
+            <p class="refaccion-marca">{{ $refaccion->marca }}</p>
             <p class="refaccion-descripcion">{{ $refaccion->descripcion }}</p>
             
             <div class="refaccion-precio">${{ number_format($refaccion->precio, 2) }} MXN</div>
@@ -185,17 +185,17 @@
             </div>
 
             @if($refaccion->proveedor)
-                <p class="proveedor-info">📦 Proveedor: {{ $refaccion->proveedor }}</p>
+                <p class="proveedor-info">Proveedor: {{ $refaccion->proveedor }}</p>
             @endif
             
             <div class="refaccion-actions">
-                <a href="{{ route('refacciones.show', $refaccion) }}" class="btn btn-info btn-small">👁️ Ver</a>
-                <a href="{{ route('refacciones.edit', $refaccion) }}" class="btn btn-warning btn-small">✏️ Editar</a>
+                <a href="{{ route('refacciones.show', $refaccion) }}" class="btn btn-info btn-small">Ver</a>
+                <a href="{{ route('refacciones.edit', $refaccion) }}" class="btn btn-warning btn-small">Editar</a>
                 <form action="{{ route('refacciones.destroy', $refaccion) }}" method="POST" style="flex: 1;" 
                       onsubmit="return confirm('¿Estás seguro de eliminar esta refacción?')">
                     @csrf
                     @method('DELETE')
-                    <button type="submit" class="btn btn-delete btn-small" style="width: 100%;">🗑️ Eliminar</button>
+                    <button type="submit" class="btn btn-delete btn-small" style="width: 100%;">Eliminar</button>
                 </form>
             </div>
         </div>
@@ -206,7 +206,7 @@
         <div class="empty-state-icon">📦</div>
         <h3>No hay refacciones registradas</h3>
         <p>Comienza agregando tu primera refacción al inventario</p>
-        <a href="{{ route('refacciones.create') }}" class="btn btn-success" style="margin-top: 20px;">➕ Agregar Refacción</a>
+        <a href="{{ route('refacciones.create') }}" class="btn btn-success" style="margin-top: 20px;">Agregar Refacción</a>
     </div>
 @endif
 @endsection
