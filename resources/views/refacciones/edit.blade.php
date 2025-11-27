@@ -104,7 +104,7 @@
         
         <div class="form-row">
             <div class="form-group">
-                <label for="nombre">Nombre de la Refacción</label>
+                <label for="nombre">Nombre de la Refacción *</label>
                 <input type="text" id="nombre" name="nombre" class="form-control"
                        value="{{ old('nombre', $refaccion->nombre) }}" required>
                 @error('nombre')
@@ -113,7 +113,7 @@
             </div>
 
             <div class="form-group">
-                <label for="codigo">Código</label>
+                <label for="codigo">Código/SKU *</label>
                 <input type="text" id="codigo" name="codigo" class="form-control"
                        value="{{ old('codigo', $refaccion->codigo) }}" required>
                 <span class="form-hint">Código único de identificación</span>
@@ -125,7 +125,7 @@
 
         <div class="form-row">
             <div class="form-group">
-                <label for="marca">Marca</label>
+                <label for="marca">Marca *</label>
                 <input type="text" id="marca" name="marca" class="form-control"
                        value="{{ old('marca', $refaccion->marca) }}" required>
                 @error('marca')
@@ -134,7 +134,7 @@
             </div>
 
             <div class="form-group">
-                <label for="categoria">Categoría</label>
+                <label for="categoria">Categoría *</label>
                 <input type="text" id="categoria" name="categoria" class="form-control"
                        value="{{ old('categoria', $refaccion->categoria) }}" required>
                 <span class="form-hint">Ej: Filtros, Frenos, Motor, etc.</span>
@@ -145,7 +145,7 @@
         </div>
 
         <div class="form-group">
-            <label for="descripcion">Descripción</label>
+            <label for="descripcion">Descripción *</label>
             <textarea id="descripcion" name="descripcion" class="form-control"
                       required>{{ old('descripcion', $refaccion->descripcion) }}</textarea>
             @error('descripcion')
@@ -155,7 +155,7 @@
 
         <div class="form-row">
             <div class="form-group">
-                <label for="precio">Precio de Venta</label>
+                <label for="precio">Precio de Venta (MXN) *</label>
                 <input type="number" id="precio" name="precio" class="form-control"
                        step="0.01" min="0" value="{{ old('precio', $refaccion->precio) }}" required>
                 @error('precio')
@@ -164,7 +164,7 @@
             </div>
 
             <div class="form-group">
-                <label for="precio_compra">Precio de Compra</label>
+                <label for="precio_compra">Precio de Compra (MXN)</label>
                 <input type="number" id="precio_compra" name="precio_compra" class="form-control"
                        step="0.01" min="0" value="{{ old('precio_compra', $refaccion->precio_compra) }}">
                 <span class="form-hint">Opcional - Costo de adquisición</span>
@@ -176,7 +176,7 @@
 
         <div class="form-row">
             <div class="form-group">
-                <label for="stock">Stock Actual</label>
+                <label for="stock">Stock Actual *</label>
                 <input type="number" id="stock" name="stock" class="form-control"
                        min="0" value="{{ old('stock', $refaccion->stock) }}" required>
                 @error('stock')
@@ -197,7 +197,7 @@
 
         <div class="form-row">
             <div class="form-group">
-                <label for="imagen">Icono</label>
+                <label for="imagen">Icono/Emoji</label>
                 <input type="text" id="imagen" name="imagen" class="form-control"
                        maxlength="10" placeholder="🔧" value="{{ old('imagen', $refaccion->imagen) }}">
                 <span class="form-hint">Emoji representativo (opcional)</span>
@@ -218,9 +218,9 @@
         </div>
 
         <div class="form-actions">
-            <button type="submit" class="btn btn-success">Actualizar Refacción</button>
-            <a href="{{ route('refacciones.show', $refaccion) }}" class="btn btn-primary">Ver Detalle</a>
-            <a href="{{ route('refacciones.index') }}" class="btn btn-danger">Cancelar</a>
+            <button type="submit" class="btn btn-success">💾 Actualizar Refacción</button>
+            <a href="{{ route('refacciones.show', $refaccion) }}" class="btn btn-primary">👁️ Ver Detalle</a>
+            <a href="{{ route('refacciones.index') }}" class="btn btn-danger">❌ Cancelar</a>
         </div>
     </form>
 </div>
