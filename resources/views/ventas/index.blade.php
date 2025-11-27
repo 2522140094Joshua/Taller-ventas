@@ -13,16 +13,18 @@
         }
 
         body {
-            background-color: #f8f9fa;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #1e6b52 100%);
             min-height: 100vh;
+            color: #ffffff;
         }
 
         .header {
-            background: linear-gradient(135deg, #2c3e50, #34495e);
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #27ae60 100%);
             color: white;
-            padding: 25px 20px;
+            padding: 30px 20px;
             position: relative;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+            border-bottom: 4px solid #27ae60;
         }
 
         .back-button {
@@ -30,86 +32,92 @@
             left: 20px;
             top: 50%;
             transform: translateY(-50%);
-            background-color: #e74c3c;
+            background: #1e3c72;
             color: white;
-            border: none;
-            padding: 12px 24px;
-            border-radius: 8px;
+            border: 2px solid #27ae60;
+            padding: 14px 28px;
+            border-radius: 10px;
             cursor: pointer;
             text-decoration: none;
             font-weight: bold;
             transition: all 0.3s ease;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
         }
 
         .back-button:hover {
-            background-color: #c0392b;
+            background: #27ae60;
+            border-color: #ffffff;
             transform: translateY(-50%) scale(1.05);
         }
 
         .title {
             text-align: center;
-            font-size: 2.8em;
+            font-size: 3em;
             font-weight: bold;
-            margin-bottom: 5px;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.4);
         }
 
         .subtitle {
             text-align: center;
-            color: #bdc3c7;
-            font-size: 1.1em;
+            color: #e8f5e8;
+            font-size: 1.2em;
+            margin-top: 10px;
         }
 
         .container {
             max-width: 1000px;
-            margin: 40px auto;
+            margin: 50px auto;
             padding: 0 20px;
         }
 
         /* Estados del carrito */
         .cart-empty {
             text-align: center;
-            padding: 60px 20px;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            padding: 80px 20px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            border: 3px solid #27ae60;
         }
 
         .cart-empty .icon {
-            font-size: 4em;
-            margin-bottom: 20px;
-            opacity: 0.7;
+            font-size: 5em;
+            margin-bottom: 30px;
+            color: #1e3c72;
         }
 
         .cart-empty h2 {
-            color: #2c3e50;
-            margin-bottom: 15px;
+            color: #1e3c72;
+            margin-bottom: 20px;
+            font-size: 2em;
         }
 
         .cart-empty p {
-            color: #7f8c8d;
-            margin-bottom: 30px;
-            font-size: 1.1em;
+            color: #2c3e50;
+            margin-bottom: 40px;
+            font-size: 1.2em;
         }
 
         .continue-shopping {
-            background: linear-gradient(135deg, #3498db, #2980b9);
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
             color: white;
-            border: none;
-            padding: 15px 30px;
-            border-radius: 8px;
+            border: 2px solid #27ae60;
+            padding: 18px 35px;
+            border-radius: 10px;
             text-decoration: none;
             font-weight: bold;
-            font-size: 1.1em;
+            font-size: 1.2em;
             transition: all 0.3s ease;
             display: inline-block;
+            margin: 0 10px;
         }
 
         .continue-shopping:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+            background: linear-gradient(135deg, #27ae60 0%, #219a52 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(39, 174, 96, 0.4);
         }
 
         /* Carrito con items */
@@ -118,29 +126,31 @@
         }
 
         .cart-items {
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
             margin-bottom: 30px;
             overflow: hidden;
+            border: 3px solid #27ae60;
         }
 
         .cart-header {
             display: grid;
             grid-template-columns: 2fr 1fr 1fr 1fr 0.5fr;
-            gap: 15px;
-            padding: 20px;
-            background: #34495e;
+            gap: 20px;
+            padding: 25px;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
             color: white;
             font-weight: bold;
+            font-size: 1.1em;
         }
 
         .cart-item {
             display: grid;
             grid-template-columns: 2fr 1fr 1fr 1fr 0.5fr;
-            gap: 15px;
-            padding: 20px;
-            border-bottom: 1px solid #ecf0f1;
+            gap: 20px;
+            padding: 25px;
+            border-bottom: 3px solid #ecf0f1;
             align-items: center;
             transition: background-color 0.3s ease;
         }
@@ -156,48 +166,67 @@
         .item-info {
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 20px;
         }
 
         .item-icon {
-            font-size: 2em;
-            width: 50px;
+            font-size: 2.5em;
+            width: 60px;
             text-align: center;
+            color: #1e3c72;
         }
 
         .item-details h3 {
-            color: #2c3e50;
+            color: #1e3c72;
+            margin-bottom: 8px;
+            font-size: 1.3em;
+        }
+
+        .item-details .item-type {
+            background: linear-gradient(135deg, #27ae60 0%, #219a52 100%);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.8em;
+            font-weight: bold;
+            display: inline-block;
             margin-bottom: 5px;
         }
 
+        .item-details .item-type.refaccion {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+        }
+
         .item-details .item-code {
-            color: #7f8c8d;
-            font-size: 0.9em;
+            color: #27ae60;
+            font-size: 1em;
+            font-weight: bold;
         }
 
         .item-price {
-            color: #2c3e50;
+            color: #1e3c72;
             font-weight: bold;
-            font-size: 1.1em;
+            font-size: 1.2em;
         }
 
         .item-total {
-            color: #e74c3c;
+            color: #27ae60;
             font-weight: bold;
-            font-size: 1.2em;
+            font-size: 1.3em;
         }
 
         .quantity-controls {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 15px;
         }
 
         .quantity-btn {
-            background: #ecf0f1;
+            background: #1e3c72;
+            color: white;
             border: none;
-            width: 35px;
-            height: 35px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             cursor: pointer;
             font-weight: bold;
@@ -205,34 +234,38 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            font-size: 1.1em;
         }
 
         .quantity-btn:hover {
-            background: #3498db;
-            color: white;
+            background: #27ae60;
+            transform: scale(1.1);
         }
 
         .quantity-input {
-            width: 60px;
+            width: 70px;
             text-align: center;
-            padding: 8px;
-            border: 2px solid #ecf0f1;
-            border-radius: 8px;
+            padding: 10px;
+            border: 2px solid #1e3c72;
+            border-radius: 10px;
             font-weight: bold;
+            color: #1e3c72;
+            font-size: 1.1em;
         }
 
         .remove-btn {
             background: #e74c3c;
             color: white;
             border: none;
-            width: 35px;
-            height: 35px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             cursor: pointer;
             transition: all 0.3s ease;
             display: flex;
             align-items: center;
             justify-content: center;
+            font-size: 1.1em;
         }
 
         .remove-btn:hover {
@@ -242,130 +275,136 @@
 
         /* Resumen del carrito */
         .cart-summary {
-            background: white;
-            border-radius: 15px;
-            padding: 30px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 35px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            border: 3px solid #27ae60;
         }
 
         .summary-title {
-            color: #2c3e50;
-            font-size: 1.5em;
-            margin-bottom: 20px;
+            color: #1e3c72;
+            font-size: 1.8em;
+            margin-bottom: 25px;
             text-align: center;
-            border-bottom: 2px solid #ecf0f1;
-            padding-bottom: 15px;
+            border-bottom: 3px solid #27ae60;
+            padding-bottom: 20px;
+            font-weight: bold;
         }
 
         .summary-row {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 15px;
-            padding: 10px 0;
+            margin-bottom: 20px;
+            padding: 12px 0;
+            font-size: 1.1em;
         }
 
         .summary-label {
-            color: #7f8c8d;
+            color: #1e3c72;
+            font-weight: 500;
         }
 
         .summary-value {
-            color: #2c3e50;
+            color: #1e3c72;
             font-weight: bold;
         }
 
         .summary-total {
-            border-top: 2px solid #ecf0f1;
-            padding-top: 15px;
-            margin-top: 10px;
-            font-size: 1.3em;
+            border-top: 3px solid #27ae60;
+            padding-top: 20px;
+            margin-top: 15px;
+            font-size: 1.5em;
         }
 
         .total-label {
-            color: #2c3e50;
+            color: #1e3c72;
         }
 
         .total-value {
-            color: #e74c3c;
+            color: #27ae60;
             font-weight: bold;
         }
 
         .checkout-actions {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            margin-top: 25px;
+            gap: 20px;
+            margin-top: 30px;
         }
 
         .continue-btn {
-            background: #95a5a6;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
             color: white;
-            border: none;
-            padding: 15px;
-            border-radius: 8px;
+            border: 2px solid #27ae60;
+            padding: 18px;
+            border-radius: 10px;
             cursor: pointer;
             font-weight: bold;
-            font-size: 1.1em;
+            font-size: 1.2em;
             transition: all 0.3s ease;
         }
 
         .continue-btn:hover {
-            background: #7f8c8d;
-            transform: translateY(-2px);
+            background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+            transform: translateY(-3px);
         }
 
         .checkout-btn {
-            background: linear-gradient(135deg, #27ae60, #219a52);
+            background: linear-gradient(135deg, #27ae60 0%, #219a52 100%);
             color: white;
-            border: none;
-            padding: 15px;
-            border-radius: 8px;
+            border: 2px solid #1e3c72;
+            padding: 18px;
+            border-radius: 10px;
             cursor: pointer;
             font-weight: bold;
-            font-size: 1.1em;
+            font-size: 1.2em;
             transition: all 0.3s ease;
         }
 
         .checkout-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(39, 174, 96, 0.4);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(39, 174, 96, 0.4);
         }
 
         .checkout-btn:disabled {
-            background: #bdc3c7;
+            background: #95a5a6;
+            border-color: #7f8c8d;
             cursor: not-allowed;
             transform: none;
-            box-shadow: none;
         }
 
         /* Mensajes de alerta */
         .alert {
-            padding: 15px 20px;
-            border-radius: 8px;
-            margin-bottom: 20px;
+            padding: 20px 25px;
+            border-radius: 10px;
+            margin-bottom: 25px;
             font-weight: bold;
+            font-size: 1.1em;
+            border: 2px solid;
         }
 
         .alert-success {
             background: #d5f4e6;
             color: #27ae60;
-            border: 1px solid #27ae60;
+            border-color: #27ae60;
         }
 
         .alert-info {
             background: #d6eaf8;
             color: #3498db;
-            border: 1px solid #3498db;
+            border-color: #3498db;
         }
 
         /* Responsive */
         @media (max-width: 768px) {
             .container {
-                margin: 20px auto;
+                margin: 30px auto;
                 padding: 0 15px;
             }
 
             .title {
-                font-size: 2.2em;
+                font-size: 2.5em;
             }
 
             .back-button {
@@ -373,19 +412,19 @@
                 left: 0;
                 top: 0;
                 transform: none;
-                margin-bottom: 15px;
+                margin-bottom: 20px;
                 display: inline-flex;
             }
 
             .cart-header {
                 grid-template-columns: 1fr 1fr;
-                gap: 10px;
+                gap: 15px;
             }
 
             .cart-item {
                 grid-template-columns: 1fr 1fr;
-                gap: 10px;
-                padding: 15px;
+                gap: 15px;
+                padding: 20px;
             }
 
             .item-info {
@@ -396,17 +435,21 @@
                 grid-template-columns: 1fr;
             }
 
-            .cart-header .header-quantity,
-            .cart-header .header-total,
-            .cart-header .header-remove {
-                display: none;
+            .cart-empty .buttons-container {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .continue-shopping {
+                margin: 0;
             }
         }
     </style>
 </head>
 <body>
     <header class="header">
-        <a href="refacciones.php" class="back-button">← Volver a Refacciones</a>
+        <a href="javascript:history.back()" class="back-button">← Volver</a>
         <h1 class="title">Carrito de Compras</h1>
         <p class="subtitle">Taller Mecánico El Talachas - Revisa y confirma tu pedido</p>
     </header>
@@ -419,10 +462,15 @@
         <div class="cart-empty" id="cartEmpty">
             <div class="icon">🛒</div>
             <h2>Tu carrito está vacío</h2>
-            <p>No hay refacciones en tu carrito de compras.</p>
-            <a href="refacciones.php" class="continue-shopping">
-                🛍️ Continuar Comprando
-            </a>
+            <p>Aún no has agregado productos o servicios al carrito.</p>
+            <div class="buttons-container">
+                <a href="refacciones.php" class="continue-shopping">
+                    🛍️ Comprar Refacciones
+                </a>
+                <a href="servicios.php" class="continue-shopping">
+                    🔧 Solicitar Servicios
+                </a>
+            </div>
         </div>
 
         <!-- Carrito con Items -->
@@ -430,7 +478,7 @@
             <!-- Lista de Items -->
             <div class="cart-items">
                 <div class="cart-header">
-                    <div class="header-product">Producto</div>
+                    <div class="header-product">Producto/Servicio</div>
                     <div class="header-price">Precio</div>
                     <div class="header-quantity">Cantidad</div>
                     <div class="header-total">Total</div>
@@ -470,7 +518,7 @@
                         🛍️ Seguir Comprando
                     </button>
                     <button class="checkout-btn" id="checkoutBtn" onclick="proceedToCheckout()">
-                        🚀 Proceder al Pago
+                        💳 Proceder al Pago
                     </button>
                 </div>
             </div>
@@ -478,8 +526,12 @@
     </div>
 
     <script>
-        // Carrito de compras
-        let carrito = JSON.parse(localStorage.getItem('carritoElTalachas')) || [];
+        // Combinar carritos de refacciones y servicios
+        let carritoRefacciones = JSON.parse(localStorage.getItem('carritoElTalachas')) || [];
+        let carritoServicios = JSON.parse(localStorage.getItem('carritoServiciosElTalachas')) || [];
+        
+        // Carrito combinado
+        let carritoCombinado = [...carritoRefacciones, ...carritoServicios];
 
         // Inicializar la página
         document.addEventListener('DOMContentLoaded', function() {
@@ -490,9 +542,13 @@
         function actualizarVistaCarrito() {
             const cartEmpty = document.getElementById('cartEmpty');
             const cartWithItems = document.getElementById('cartWithItems');
-            const cartItemsList = document.getElementById('cartItemsList');
 
-            if (carrito.length === 0) {
+            // Actualizar carrito combinado
+            carritoRefacciones = JSON.parse(localStorage.getItem('carritoElTalachas')) || [];
+            carritoServicios = JSON.parse(localStorage.getItem('carritoServiciosElTalachas')) || [];
+            carritoCombinado = [...carritoRefacciones, ...carritoServicios];
+
+            if (carritoCombinado.length === 0) {
                 cartEmpty.style.display = 'block';
                 cartWithItems.style.display = 'none';
             } else {
@@ -508,27 +564,37 @@
             const cartItemsList = document.getElementById('cartItemsList');
             cartItemsList.innerHTML = '';
 
-            carrito.forEach(item => {
-                const itemTotal = item.precio * item.cantidad;
+            carritoCombinado.forEach(item => {
+                const itemTotal = item.precio * (item.cantidad || 1);
+                const tipo = item.tipo === 'servicio' ? 'Servicio' : 'Refacción';
+                const tipoClase = item.tipo === 'servicio' ? 'servicio' : 'refaccion';
+                
                 const cartItem = document.createElement('div');
                 cartItem.className = 'cart-item';
                 cartItem.innerHTML = `
                     <div class="item-info">
-                        <div class="item-icon">${item.imagen}</div>
+                        <div class="item-icon">${item.imagen || '🔧'}</div>
                         <div class="item-details">
+                            <span class="item-type ${tipoClase}">${tipo}</span>
                             <h3>${item.nombre}</h3>
-                            <div class="item-code">Código: REF-${item.id.toString().padStart(3, '0')}</div>
+                            ${item.marca ? `<div class="item-code">Marca: ${item.marca}</div>` : ''}
+                            ${item.fecha ? `<div class="item-code">Fecha: ${item.fecha}</div>` : ''}
                         </div>
                     </div>
                     <div class="item-price">$${item.precio.toFixed(2)}</div>
                     <div class="quantity-controls">
-                        <button class="quantity-btn" onclick="cambiarCantidad(${item.id}, -1)">-</button>
-                        <input type="number" class="quantity-input" value="${item.cantidad}" 
-                               min="1" max="99" onchange="actualizarCantidad(${item.id}, this.value)">
-                        <button class="quantity-btn" onclick="cambiarCantidad(${item.id}, 1)">+</button>
+                        ${item.tipo === 'servicio' ? 
+                            `<span style="color: #1e3c72; font-weight: bold;">1</span>` :
+                            `
+                            <button class="quantity-btn" onclick="cambiarCantidad(${item.id}, -1)">-</button>
+                            <input type="number" class="quantity-input" value="${item.cantidad}" 
+                                   min="1" max="99" onchange="actualizarCantidad(${item.id}, this.value)">
+                            <button class="quantity-btn" onclick="cambiarCantidad(${item.id}, 1)">+</button>
+                            `
+                        }
                     </div>
                     <div class="item-total">$${itemTotal.toFixed(2)}</div>
-                    <button class="remove-btn" onclick="removerItem(${item.id})">🗑️</button>
+                    <button class="remove-btn" onclick="removerItem(${item.id}, '${item.tipo}')">🗑️</button>
                 `;
                 cartItemsList.appendChild(cartItem);
             });
@@ -536,56 +602,79 @@
 
         // Actualizar resumen de compra
         function actualizarResumen() {
-            const subtotal = carrito.reduce((sum, item) => sum + (item.precio * item.cantidad), 0);
+            const subtotal = carritoCombinado.reduce((sum, item) => {
+                return sum + (item.precio * (item.cantidad || 1));
+            }, 0);
+            
             const iva = subtotal * 0.16;
-            const shipping = subtotal > 1000 ? 0 : 150; // Envío gratis sobre $1000
+            
+            // Envío gratis para servicios, para refacciones gratis sobre $1000
+            const tieneServicios = carritoCombinado.some(item => item.tipo === 'servicio');
+            const soloRefacciones = carritoCombinado.every(item => !item.tipo || item.tipo !== 'servicio');
+            
+            let shipping = 0;
+            if (soloRefacciones && subtotal < 1000) {
+                shipping = 150;
+            }
+
             const total = subtotal + iva + shipping;
 
             document.getElementById('subtotal').textContent = `$${subtotal.toFixed(2)} MXN`;
             document.getElementById('iva').textContent = `$${iva.toFixed(2)} MXN`;
-            document.getElementById('shipping').textContent = shipping === 0 ? 'GRATIS' : `$${shipping.toFixed(2)} MXN`;
+            
+            if (shipping === 0) {
+                document.getElementById('shipping').innerHTML = 'GRATIS <span style="color:#27ae60; font-size:0.8em;">✓</span>';
+            } else {
+                document.getElementById('shipping').textContent = `$${shipping.toFixed(2)} MXN`;
+            }
+            
             document.getElementById('total').textContent = `$${total.toFixed(2)} MXN`;
 
             // Mostrar mensaje de envío gratis
-            if (subtotal > 1000) {
+            if (shipping === 0 && soloRefacciones) {
                 document.getElementById('shipping').innerHTML = 'GRATIS <span style="color:#27ae60; font-size:0.8em;">✓</span>';
             }
         }
 
-        // Cambiar cantidad de un item
+        // Cambiar cantidad de un item (solo refacciones)
         function cambiarCantidad(id, cambio) {
-            const item = carrito.find(item => item.id === id);
+            const item = carritoRefacciones.find(item => item.id === id);
             if (item) {
                 item.cantidad += cambio;
                 if (item.cantidad < 1) item.cantidad = 1;
                 if (item.cantidad > 99) item.cantidad = 99;
                 
-                guardarCarrito();
+                guardarCarritos();
                 actualizarVistaCarrito();
                 mostrarAlerta('Cantidad actualizada', 'success');
             }
         }
 
-        // Actualizar cantidad desde input
+        // Actualizar cantidad desde input (solo refacciones)
         function actualizarCantidad(id, nuevaCantidad) {
             const cantidad = parseInt(nuevaCantidad);
             if (isNaN(cantidad) || cantidad < 1) return;
 
-            const item = carrito.find(item => item.id === id);
+            const item = carritoRefacciones.find(item => item.id === id);
             if (item) {
                 item.cantidad = Math.min(cantidad, 99);
-                guardarCarrito();
+                guardarCarritos();
                 actualizarVistaCarrito();
             }
         }
 
         // Remover item del carrito
-        function removerItem(id) {
-            if (confirm('¿Estás seguro de que quieres eliminar este producto del carrito?')) {
-                carrito = carrito.filter(item => item.id !== id);
-                guardarCarrito();
+        function removerItem(id, tipo) {
+            if (confirm('¿Estás seguro de que quieres eliminar este item del carrito?')) {
+                if (tipo === 'servicio') {
+                    carritoServicios = carritoServicios.filter(item => item.id !== id);
+                } else {
+                    carritoRefacciones = carritoRefacciones.filter(item => item.id !== id);
+                }
+                
+                guardarCarritos();
                 actualizarVistaCarrito();
-                mostrarAlerta('Producto eliminado del carrito', 'success');
+                mostrarAlerta('Item eliminado del carrito', 'success');
             }
         }
 
@@ -596,19 +685,26 @@
 
         // Proceder al pago
         function proceedToCheckout() {
-            if (carrito.length === 0) {
+            if (carritoCombinado.length === 0) {
                 mostrarAlerta('El carrito está vacío', 'info');
                 return;
             }
 
-            const total = carrito.reduce((sum, item) => sum + (item.precio * item.cantidad), 0);
+            const total = carritoCombinado.reduce((sum, item) => sum + (item.precio * (item.cantidad || 1)), 0);
             const iva = total * 0.16;
-            const shipping = total > 1000 ? 0 : 150;
+            const tieneServicios = carritoCombinado.some(item => item.tipo === 'servicio');
+            const soloRefacciones = carritoCombinado.every(item => !item.tipo || item.tipo !== 'servicio');
+            
+            let shipping = 0;
+            if (soloRefacciones && total < 1000) {
+                shipping = 150;
+            }
+
             const totalFinal = total + iva + shipping;
 
             const confirmacion = confirm(
                 `¿Confirmar pedido?\n\n` +
-                `Productos: ${carrito.length}\n` +
+                `Items en carrito: ${carritoCombinado.length}\n` +
                 `Subtotal: $${total.toFixed(2)} MXN\n` +
                 `IVA: $${iva.toFixed(2)} MXN\n` +
                 `Envío: ${shipping === 0 ? 'GRATIS' : '$' + shipping.toFixed(2) + ' MXN'}\n` +
@@ -618,23 +714,28 @@
 
             if (confirmacion) {
                 // Simular proceso de pago
-                mostrarAlerta('¡Pedido confirmado! Redirigiendo al pago...', 'success');
+                mostrarAlerta('¡Pedido confirmado! Procesando tu solicitud...', 'success');
                 
                 setTimeout(() => {
-                    // Aquí normalmente redirigirías a una pasarela de pago
-                    alert('¡Gracias por tu compra en El Talachas!\n\nTu pedido ha sido procesado exitosamente. Nos pondremos en contacto contigo para coordinar la entrega.');
+                    alert('¡Gracias por tu confianza en El Talachas!\n\n' +
+                          'Tu pedido ha sido registrado exitosamente. ' +
+                          (tieneServicios ? 
+                           'Nos pondremos en contacto contigo para agendar tu servicio.' :
+                           'Nos pondremos en contacto para coordinar la entrega de tus refacciones.'));
                     
-                    // Limpiar carrito después de la compra
-                    carrito = [];
-                    guardarCarrito();
+                    // Limpiar carritos después de la compra
+                    carritoRefacciones = [];
+                    carritoServicios = [];
+                    guardarCarritos();
                     actualizarVistaCarrito();
                 }, 2000);
             }
         }
 
-        // Guardar carrito en localStorage
-        function guardarCarrito() {
-            localStorage.setItem('carritoElTalachas', JSON.stringify(carrito));
+        // Guardar carritos en localStorage
+        function guardarCarritos() {
+            localStorage.setItem('carritoElTalachas', JSON.stringify(carritoRefacciones));
+            localStorage.setItem('carritoServiciosElTalachas', JSON.stringify(carritoServicios));
         }
 
         // Mostrar alertas
@@ -651,11 +752,12 @@
 
         // Vaciar carrito completamente
         function vaciarCarrito() {
-            if (carrito.length === 0) return;
+            if (carritoCombinado.length === 0) return;
             
             if (confirm('¿Estás seguro de que quieres vaciar completamente el carrito?')) {
-                carrito = [];
-                guardarCarrito();
+                carritoRefacciones = [];
+                carritoServicios = [];
+                guardarCarritos();
                 actualizarVistaCarrito();
                 mostrarAlerta('Carrito vaciado', 'success');
             }
