@@ -9,4 +9,6 @@ Route::get('/', function () {
 });
 
 Route::resource('servicios', ServiciosController::class);
-Route::resource('refacciones', RefaccionesController::class);
+Route::resource('refacciones', RefaccionesController::class)->parameters([
+    'refacciones' => 'refaccion'
+]);

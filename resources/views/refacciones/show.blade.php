@@ -189,7 +189,7 @@
 
     <!-- Descripción -->
     <div class="descripcion-box">
-        <div class="detail-label">Descripción</div>
+        <div class="detail-label">📝 Descripción</div>
         <p class="descripcion-text">{{ $refaccion->descripcion }}</p>
     </div>
 
@@ -197,25 +197,25 @@
     <div class="detail-grid">
         <!-- Marca -->
         <div class="detail-card">
-            <div class="detail-label">Marca</div>
+            <div class="detail-label">🏷️ Marca</div>
             <div class="detail-value">{{ $refaccion->marca }}</div>
         </div>
 
         <!-- Proveedor -->
         <div class="detail-card">
-            <div class="detail-label">Proveedor</div>
+            <div class="detail-label">📦 Proveedor</div>
             <div class="detail-value">{{ $refaccion->proveedor ?? 'No especificado' }}</div>
         </div>
 
         <!-- Precio de venta -->
         <div class="detail-card">
-            <div class="detail-label">Precio de Venta</div>
+            <div class="detail-label">💰 Precio de Venta</div>
             <div class="detail-value price">${{ number_format($refaccion->precio, 2) }} MXN</div>
         </div>
 
         <!-- Precio de compra -->
         <div class="detail-card">
-            <div class="detail-label">Precio de Compra</div>
+            <div class="detail-label">💵 Precio de Compra</div>
             <div class="detail-value">
                 @if($refaccion->precio_compra)
                     ${{ number_format($refaccion->precio_compra, 2) }} MXN
@@ -227,7 +227,7 @@
 
         <!-- Stock actual -->
         <div class="detail-card stats-card">
-            <div class="detail-label">Stock Actual</div>
+            <div class="detail-label">📊 Stock Actual</div>
             <div class="detail-value stock">
                 {{ $refaccion->stock }} unidades
             </div>
@@ -235,7 +235,7 @@
 
         <!-- Stock mínimo -->
         <div class="detail-card">
-            <div class="detail-label">Stock Mínimo</div>
+            <div class="detail-label">📉 Stock Mínimo</div>
             <div class="detail-value {{ $refaccion->stock_bajo ? 'stock-bajo' : 'stock-ok' }}">
                 {{ $refaccion->stock_minimo }} unidades
             </div>
@@ -244,7 +244,7 @@
         <!-- Margen de ganancia -->
         @if($refaccion->precio_compra)
         <div class="detail-card detail-full">
-            <div class="detail-label">Margen de Ganancia</div>
+            <div class="detail-label">📈 Margen de Ganancia</div>
             <div class="detail-value" style="color: #27ae60;">
                 ${{ number_format($refaccion->precio - $refaccion->precio_compra, 2) }} MXN
                 ({{ number_format((($refaccion->precio - $refaccion->precio_compra) / $refaccion->precio_compra) * 100, 2) }}%)
@@ -254,16 +254,16 @@
 
         <!-- Fechas -->
         <div class="detail-card">
-            <div class="detail-label">Fecha de Registro</div>
+            <div class="detail-label">📅 Fecha de Registro</div>
             <div class="detail-value" style="font-size: 1em;">
-                {{ $refaccion->created_at->format('d/m/Y H:i') }}
+                {{ $refaccion->created_at ? $refaccion->created_at->format('d/m/Y H:i') : 'No disponible' }}
             </div>
         </div>
 
         <div class="detail-card">
-            <div class="detail-label">Última Actualización</div>
+            <div class="detail-label">🔄 Última Actualización</div>
             <div class="detail-value" style="font-size: 1em;">
-                {{ $refaccion->updated_at->format('d/m/Y H:i') }}
+                {{ $refaccion->updated_at ? $refaccion->updated_at->format('d/m/Y H:i') : 'No disponible' }}
             </div>
         </div>
     </div>
@@ -271,17 +271,17 @@
     <!-- Botones de acción -->
     <div class="action-buttons">
         <a href="{{ route('refacciones.edit', $refaccion) }}" class="btn btn-warning">
-            Editar Refacción
+            ✏️ Editar Refacción
         </a>
         <a href="{{ route('refacciones.index') }}" class="btn btn-primary">
-            Volver al Catálogo
+            ← Volver al Catálogo
         </a>
         <form action="{{ route('refacciones.destroy', $refaccion) }}" method="POST" 
               onsubmit="return confirm('¿Estás seguro de eliminar esta refacción? Esta acción no se puede deshacer.')">
             @csrf
             @method('DELETE')
             <button type="submit" class="btn btn-danger">
-                Eliminar Refacción
+                🗑️ Eliminar Refacción
             </button>
         </form>
     </div>
