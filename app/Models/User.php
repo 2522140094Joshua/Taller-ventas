@@ -10,10 +10,6 @@ use Illuminate\Notifications\Notifiable;
 class User extends Authenticatable
 {
 
-    public function membresia()
-{
-    return $this->hasOne(Membresia::class, 'id_usuario');
-}
 
     /** @use HasFactory<\Database\Factories\UserFactory> */
     use HasFactory, Notifiable;

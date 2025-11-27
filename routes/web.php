@@ -32,7 +32,7 @@ Route::middleware(['auth'])->group(function () {
 
     // Rutas de módulos principales
     Route::resource('servicios', ServiciosController::class);
-    Route::resource('refacciones', RefaccionesController::class);
+    Route::resource('refacciones', controller: RefaccionesController::class);
     Route::resource('vehiculos', VehiculosController::class);
     Route::resource('ventas', VentasController::class);
 });
